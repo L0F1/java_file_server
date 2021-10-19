@@ -1,8 +1,8 @@
 package server;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Session extends Thread{
@@ -16,12 +16,12 @@ public class Session extends Thread{
     public void run() {
 
         try {
-            DataInputStream input = new DataInputStream(socket.getInputStream());
-            DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+            var input = new DataInputStream(socket.getInputStream());
+            var output = new PrintWriter(socket.getOutputStream());
 
             String msg = input.readUTF();
             System.out.println("Received: " + msg);
-            output.writeUTF("All files were sent!");
+            output.print("All files were sent!");
             System.out.println("Sent: All files were sent!");
             socket.close();
 

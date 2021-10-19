@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FileServerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-14T01:01:22" hostname="IVANPC" time="1.078">
+<testsuite name="FileServerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-15T17:50:07" hostname="IVANPC" time="0.345">
   <properties/>
-  <testcase name="start" classname="FileServerTest" time="1.078"/>
+  <testcase name="start" classname="FileServerTest" time="0.345"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Server started!
 Client started!
-Sent: Give me everything you have!
-Received: Give me everything you have!
-Sent: All files were sent!
-Received: All files were sent!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> exit
+The request was sent.
+Server started!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 2
+Enter filename:
+> test_purpose_PXGYEC.txt
+Enter file content:
+> UGCD5TZP
+The request was sent.
+The response says that the file was created!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 2
+Enter filename:
+> test_purpose_PXGYEC.txt
+Enter file content:
+> UGCD5TZP
+The request was sent.
+The response says that creating the file was forbidden!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 1
+Enter filename:
+> test_purpose_PXGYEC.txt
+The request was sent.
+The content of the file is: UGCD5TZP
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 1
+Enter filename:
+> test_purpose_IQKNZBO.txt
+The request was sent.
+The response says that the file was not found!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 3
+Enter filename:
+> test_purpose_IB8O6.txt
+The request was sent.
+The response says that the file was not found!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> 3
+Enter filename:
+> test_purpose_PXGYEC.txt
+The request was sent.
+The response says that the file was successfully deleted!
+Client started!
+Enter action (1 - get a file, 2 - create a file, 3 - delete a file):
+> exit
+The request was sent.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
